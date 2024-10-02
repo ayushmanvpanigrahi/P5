@@ -1,0 +1,185 @@
+c)  
+
+//ReverseClass.java
+package reversepack;
+public class ReverseClass {
+public int reverse(int n){
+int r=0;
+int digit;
+while(n!=0)
+{
+digit=n%10;
+r=(r*10)+digit;
+n=n/10;
+}
+return r;
+}
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+}
+}
+//reverseTest.java
+package reversepack;
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class reverseTest {
+@Test
+public void test() {
+ReverseClass r1=new ReverseClass();
+int a=r1.reverse(1234);
+assertEquals(a,4321);
+}
+}
+
+--------------------------------------------------------------------------------------------
+
+b)
+
+//ArithmeticClass.java
+package arithmeticPack;
+public class ArithmeticClass {
+public int Addition(int a,int b)
+{
+return (a+b);
+}
+public int Subtraction(int a,int b)
+{
+return(a-b);
+}
+public int Multiplication(int a,int b)
+{
+return(a*b);
+}
+public int Division(int a,int b)
+{
+return(a/b);
+}
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+}
+}
+
+
+---------------------------------------------------------------------------------------------
+
+
+//AdditionTest.java
+package arithmeticPack;
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class AdditionTest {
+@Test
+public void testAdd() {
+ArithmeticClass ac=new ArithmeticClass();
+int add=ac.Addition(10, 20);
+assertEquals(add,30);
+}
+}
+
+-------------------------------------------------------------------------------
+
+//SubtractionTest.java
+package arithmeticPack;
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class SubtractTest {
+@Test
+public void test() {
+ArithmeticClass ac=new ArithmeticClass();
+int sub=ac.Subtraction(20, 10);
+assertEquals(sub,10);
+}
+}
+---------------------------------------------------------------------------------
+
+
+//MultiplyTest.java
+package arithmeticPack;
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class MultiplyTest {
+@Test
+public void test() {
+ArithmeticClass ac=new ArithmeticClass();
+int mul=ac.Multiplication(5, 2);
+assertEquals(mul,10);
+}
+}
+
+
+---------------------------------------------------------------------
+
+
+//DivideTest.java
+package arithmeticPack;
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class DivideTest {
+@Test
+public void test() {
+ArithmeticClass ac=new ArithmeticClass();
+int div=ac.Division(25, 5);
+assertEquals(div,5);
+}
+}
+
+--------------------------------------------------------------------------------A
+
+
+A)
+
+
+//Factcls.java
+package factpack;
+public class factcls {
+public int factorial(int n)
+{
+int fact=1;
+while(n>0)
+{
+fact=fact*n;
+n--;
+}
+return(fact);
+}
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+}
+}
+
+---------------------------------------------------------------------
+
+
+//FactorialTest.java
+package factpack;
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class factorialTest {
+@Test
+public void testFactorial() {
+factcls f1=new factcls();
+int f=f1.factorial(5);
+assertEquals(f,120);
+}
+}
+
+
+-----------------------------------------------------------------------------------
+
+
+//TestCase2
+//package factpack;
+import static org.junit.Assert.*;
+import org.junit.Test;
+public class factorialTest {
+@Test
+public void testFactorial() {
+factcls f1=new factcls();
+int f=f1.factorial(4);
+assertEquals(f,120);
+}
+}
+
+
+
+
